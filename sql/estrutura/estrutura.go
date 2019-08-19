@@ -7,6 +7,10 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 )
 
+/*Antes de Usar o Banco deve-se Subir o servidor
+service mysqld start
+*/
+
 func exec(db *sql.DB, sql string) sql.Result {
 	result, err := db.Exec(sql)
 	if err != nil {
